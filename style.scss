@@ -8,6 +8,7 @@ body {
   max-width: 390px;
   width: 390px;
   margin: 0 auto;
+  background: #F0F0F0;
   font-family: "Gotham", sans-serif;
 }
 
@@ -169,7 +170,6 @@ body {
 }
 
 .product {
-
   &__name {
 	font-size: 19.168px;
 	font-style: normal;
@@ -180,8 +180,23 @@ body {
 	margin: 20px 0;
   }
 
+  &__main-images {
+	display: flex;
+	width: 358px;
+	height: 232px;
+	overflow: hidden;
+	margin-bottom: 20px;
+
+	&__container {
+	  display: flex;
+	  transition: all 0.3s ease-in-out;
+	}
+  }
+
   &__main-image {
 	border-radius: 20px;
+	width: 358px;
+	height: 232px;
 	transition: all 0.3s ease-in-out;
   }
 
@@ -202,14 +217,122 @@ body {
 	opacity: 0.4;
   }
 
-  .stars-rating {
+  .product-info {
+	font-size: 15.29px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+
+	&__delivery {
+	  margin: 12px 0 12px 0;
+	}
+  }
+
+  .rating {
+	width: 200px;
+	height: 15px;
 	display: flex;
+	gap: 4px;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 12px 0 20px 0;
+  }
+
+  .rating p {
+	font-size: 15.29px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-left: 10px;
+  }
+
+  .rating:not(:checked) > input {
+	display: none;
+  }
+
+  .rating:not(:checked) > label {
+	cursor: pointer;
+	color: lightgrey;
+	line-height: 1;
+  }
+
+  .rating:not(:checked) > label:before {
+	content: url("./images/stroke.svg");
+  }
+
+  .rating > input:checked ~ label {
+	content: url("./images/fill.svg");
+  }
+
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+	color: gold;
+	content: url("./images/fill.svg");
+  }
+
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+	color: gold;
+	content: url("./images/fill.svg");
+  }
+
+  .product-info h3 span {
+	font-size: 15.29px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
   }
 
   .selection {
 	display: flex;
 	justify-content: space-between;
+
+
+	&__header {
+	  text-align: center;
+	  font-size: 10px;
+	  font-style: normal;
+	  font-weight: 400;
+	  line-height: normal;
+	  color: #2C2B31;
+	}
   }
 
+  .selection select {
+	padding: 15px 30px;
+	border: none;
+	background: #FFF;
+	cursor: pointer;
+	border-radius: 15px;
+	font-size: 21.69px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+  }
+
+  .order-button {
+	max-width: 356px;
+	background-color: #37D997;
+	text-align: center;
+	border-radius: 15px;
+	padding: 12px 20px;
+	margin: 20px 0 40px;
+  }
+
+  .order-button a {
+	color: #FFF;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+  }
 }
 

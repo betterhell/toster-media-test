@@ -66,60 +66,80 @@
 
     <div class="product">
         <h1 class="product__name">Orthopedic Slippers</h1>
-        <img class="product__main-image" src="http://localhost:63342/toster-media-test/images/slippers/black.png"
-             alt="black slippers">
+
+        <div class="product__main-images">
+            <div class="product__main-images__container">
+                <img class="product__main-image"
+                     src="./images/slippers/black.png"
+                     alt="black slippers">
+                <img class="product__main-image"
+                     src="./images/slippers/orange.png"
+                     alt="orange slippers">
+                <img class="product__main-image" src="./images/slippers/pink.png"
+                     alt="pink slippers">
+                <img class="product__main-image"
+                     src="./images/slippers/yellow.png"
+                     alt="yellow slippers">
+            </div>
+        </div>
 
         <div class="product__images">
-            <img class="product__images__image current" src="./images/slippers/black.png" alt="black slippers">
-            <img class="product__images__image" src="./images/slippers/orange.png" alt="orange slippers">
-            <img class="product__images__image" src="./images/slippers/pink.png" alt="pink slippers">
-            <img class="product__images__image" src="./images/slippers/yellow.png" alt="yelliw slippers">
+            <img data-offset="0" class="product__images__image current" src="./images/slippers/black.png"
+                 alt="black slippers">
+            <img data-offset="-358" class="product__images__image" src="./images/slippers/orange.png"
+                 alt="orange slippers">
+            <img data-offset="-716" class="product__images__image" src="./images/slippers/pink.png"
+                 alt="pink slippers">
+            <img data-offset="-1074" class="product__images__image" src="./images/slippers/yellow.png"
+                 alt="yellow slippers">
         </div>
 
-        <div>
-            <h3>Fast Delivery: 2-4 days from SA 🇿🇦</h3>
-            <h3>In Stock: Shipping from Johannesburg 🇿🇦</h3>
-        </div>
+        <div class="product-info">
+            <h3 class="product-info__delivery">Fast Delivery: <span>2-4 days from SA</span> 🇿🇦</h3>
+            <h3 class="product-info__stock">In Stock: <span>Shipping from Johannesburg</span> 🇿🇦</h3>
 
-        <div class="stars-rating">
-            <img src="./images/Property%201=stroke.svg" alt="rating">
-            <img src="./images/Property%201=stroke.svg" alt="rating">
-            <img src="./images/Property%201=stroke.svg" alt="rating">
-            <img src="./images/Property%201=stroke.svg" alt="rating">
-            <img src="./images/Property%201=stroke.svg" alt="rating">
-            <p>(10)</p>
+            <div class="rating">
+                <p>(10)</p>
+                <input type="radio" id="star-1" name="rating" value="1">
+                <label for="star-1" title="Оценка «1»"></label>
+                <input type="radio" id="star-2" name="rating" value="2">
+                <label for="star-2" title="Оценка «2»"></label>
+                <input type="radio" id="star-3" name="rating" value="3">
+                <label for="star-3" title="Оценка «3»"></label>
+                <input type="radio" id="star-4" name="rating" value="4">
+                <label for="star-4" title="Оценка «4»"></label>
+                <input type="radio" id="star-5" name="rating" value="5">
+                <label for="star-5" title="Оценка «5»"></label>
+            </div>
         </div>
 
         <div class="selection">
-            <div>
-                <p>color</p>
+            <div class="selection-colors">
+                <p class="selection__header">color</p>
                 <select>
-                    <option value="BLACK">BLACK</option>
-                    <option value="ORANGE">ORANGE</option>
-                    <option value="PINK">PINK</option>
-                    <option value="YELLOW">YELLOW</option>
+                    <option>BLACK</option>
+                    <option>ORANGE</option>
+                    <option>PINK</option>
+                    <option>YELLOW</option>
                 </select>
             </div>
 
-            <div>
-                <p>size</p>
+            <div class="selection-sizes">
+                <p class="selection__header">size</p>
                 <select>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
                 </select>
             </div>
-
         </div>
 
-        <div>
-            <a target="_blank" href="http://youtube.com">BUY NOW</a>
+        <div class="order-button">
+            <a target="_blank" href="https://youtube.com">BUY NOW</a>
         </div>
-
     </div>
 </main>
-
 <script src="scripts.js"></script>
 </body>
 </html>
